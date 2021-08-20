@@ -1,0 +1,70 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+#  nginx-proxy:
+#    image: jwilder/nginx-proxy
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - "web"
+#    volumes:
+#      - /var/run/docker.sock:/tmp/docker.sock:ro
+#      - ./nginx/vhost/:/etc/nginx/vhost.d:ro
+#      - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
+#      - ./static/:/code/static/
+#      - ./media/:/code/media/
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
+    volumes:
+      - ./static/:/code/static/
+      - ./media/:/code/media/
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdb:/var/lib/postgresql/data
+    env_file: ./.env
+
+  web:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+      - ./static/:/code/static/
+      - ./media/:/code/media/
+    depends_on:
+      - "db"
+    env_file: ./.env
+    environment:
+      - VIRTUAL_HOST=localhost,34.141.107.120
+      - VIRTUAL_PORT=8000
+      - HTTP_PORT=8000
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+
+  celery:
+    build:
+      context: .
+      dockerfile: celery.dockerfile
+    restart: always
+    command: celery -A PAVSHOP worker --beat --scheduler django --loglevel=info
+    volumes:
+      - .:/code
+    depends_on:
+      - "db"
+      - "redis"
+    env_file: ./.env
