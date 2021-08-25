@@ -1,0 +1,197 @@
+{% extends 'base.html'  %}
+{% load bootstrap%}
+
+{% block content %}
+{% load static %}
+  
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>PAVSHOP PRODUCTS</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">Data</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Products -->
+    <section class="shop-page padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="row"> 
+          
+          <!-- Item Content -->
+          <div class="col-sm-9">
+            <div class="item-display">
+              <div class="row"> 
+                <!-- Products Select -->
+                <div class="col-xs-6">
+                  <div class="pull-left"> 
+
+                    <!-- GRID & LIST --> 
+                <a href="#." class="grid-style"><i class="icon-grid"></i></a> <a href="#." class="list-style"><i class="icon-list"></i></a> </div>
+                </div>
+                <div class="col-xs-6 text-right"> <span class="product-num">Showing {{product_list.count}} products</span> </div>
+              </div>
+            </div>
+            
+
+            <!-- Popular Item Slide -->
+            <div class="papular-block row single-img-demos"> 
+              {% for p in page_obj %}
+              
+              <!-- Item -->
+              <div class="col-md-4">
+                <div class="item"> 
+                 <!-- Sale Tags -->
+              {%if p.discount%}<div class="on-sale"> {{p.discount}} % <span>OFF</span></div>{%endif%}
+                  <!-- Item img -->
+
+                  <div class="item-img"> <img class="img-1" src="{{p.cover_image.url}}" alt="" >
+                    <!-- Overlay -->
+                    <div class="overlay">
+                      <div class="position-center-center">
+                        <div class="inn"><a href='{{p.cover_image.url}}' data-lighter><i class="icon-magnifier"></i></a> 
+                        <a href="#."><i class="icon-basket"></i></a> 
+                        <a id="likeItem{{p.id}}" onclick="LikeItem({{p.id}})"><i class="fas fa-heart"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item Name -->
+                  <div class="item-name"> <a href="{% url 'product:product_detail' p.id %}">{{p.title}}</a>
+                    <p>{{p.description|truncatechars:60}}</p>
+                  </div>
+                  <!-- Price --> 
+                  
+              
+              {%if p.discount%}
+              <span class="price" ><small>$</small>{{p.total_price}} <span style="color:red; text-decoration:line-through"><small>$</small>{{p.price}}</span></span>
+            
+               {%else%}
+              <span class="price" ><small>$</small>{{p.price}}</span>
+              {%endif%}
+              </div>
+
+
+
+
+
+                  
+              </div>
+      
+              {% endfor %}
+              </div>
+              
+            
+            <!-- Pagination -->
+            <ul class="pagination in-center">
+               {% if page_obj.has_previous %}
+              <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+              {% endif %}
+              {% for page in page_obj.paginator.page_range %}
+              {% if page == page_obj.number %}
+              <li class="active"><a href="#">{{ page }}</a></li>
+              {% else %}
+              <li><a href="?page={{page}}">{{page}}</a></li>
+              {% endif %}
+              {% endfor  %}
+
+              {% if page_obj.has_next %}
+              <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+              {% endif %}
+            </ul>
+          </div>
+          
+          <!-- Shop SideBar -->
+          <div class="col-sm-3">
+            <div class="shop-sidebar"> 
+        <!-- Category -->
+              <h5 class="shop-tittle margin-bottom-30">category</h5>
+              <ul class="shop-cate">
+              {%for i in category_list%}
+              {%if i.products.count %}
+                <li><a href="?category={{i.id}}"> {{i.title}} <span>{{i.products.count}}</span></a></li>
+              {%endif%}
+              {%endfor%}
+              </ul>
+              <!-- FILTER BY PRICE -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY PRICE</h5>
+              <ul class="shop-tags">
+              <li><a href="?ordering=ascending">Ascending price</a></li>
+              <li><a href="?ordering=descending">Descending price</a></li>
+              </ul>
+              
+              <!-- COLORS-->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY COLORS</h5>
+              <ul class="colors">
+              {% for i in colors%}
+                <li><a href="?color={{i.id}}" style="background:{{i.title}};"></a></li>
+              {%endfor%}
+              </ul>
+              
+              <!-- TAGS -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">POPULAR TAGS</h5>   
+              <ul class="shop-tags">
+              {% for p in tag_list %}
+                <li><a href="?tag={{p.id}}">{{p.name}}</a></li>
+                {% endfor %}
+              </ul>
+
+              
+              <!-- BRAND -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">brands</h5>
+              <ul class="shop-cate">
+              {%for i in brands%}
+                <li><a href="?brand={{i.id}}">{{i.title}}</a></li>
+              {%endfor%}
+              </ul>
+              
+              <!-- SIDE BACR BANER -->
+              <div class="side-bnr margin-top-50"> <img class="img-responsive" src="{% static 'images/clothes1.jpeg' %}" alt="">
+                <div class="position-center-center"> <span class="price"><small>$</small>199</span>
+                  <div class="bnr-text">look
+                    beau
+                    tiful
+                    with
+                    style</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    
+  </div>
+   <script src="{% static 'js/likeItem.js' %}"></script>
+    {% endblock %}

@@ -1,0 +1,330 @@
+{% extends 'base.html'  %}
+
+
+{% block content %}
+{% load static %}
+
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+
+        <h4>{{product.title}}</h4>
+        <p>{{product.description|truncatechars:100}}</p>
+
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">Data</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Popular Products -->
+    <section class="padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- SHOP DETAIL -->
+        <div class="shop-detail">
+          <div class="row"> 
+            <div class="row" >
+  
+            <!-- Popular Images Slider -->
+            <div class="col-md-7">     
+              
+              <!-- Images Slider -->
+              <div class="images-slider">
+                <ul class="slides">
+                <li data-thumb='{{product.cover_image.url}}'> <img class="img-responsive" src='{{product.cover_image.url}}'  alt=""> </li>
+                  {%for j in product.images.all|slice:":2" %}
+                  <li data-thumb='{{j.title.url}}'> <img class="img-responsive" src='{{j.title.url}}'  alt=""> </li>
+                       {%endfor%}
+  
+                </ul>
+              </div>
+            </div>
+          
+            <!-- Content -->
+            <div class="col-md-5">
+              <h4>{{product.title}}</h4>
+              {%if product.discount%}
+              <span class="price" style="color:green"><small>$</small>{{product.total_price}} <span style="color:red; text-decoration:line-through"><small>$</small>{{product.price}}</span></span>
+            
+               {%else%}
+              <span class="price" ><small>$</small>{{product.price}}</span>
+              {%endif%}
+              
+              
+              <!-- Sale Tags -->
+              {%if product.discount%}<div class="on-sale"> {{product.discount}} % <span>OFF</span></div>{%endif%}
+              <ul class="item-owner">
+                <li>Designer :<span> {{product.designer}}</span></li>
+                <li>Brand:<span>{{product.brand.title}}</span></li>
+                <li style="color: #FFE119;">
+                    <i  class="fa fa-star{% if product.get_avg_rating < 1 %}-o empty{% endif %}"></i>
+                    <i  class="fa fa-star{% if product.get_avg_rating < 2 %}-o empty{% endif %}"></i>
+                    <i  class="fa fa-star{% if product.get_avg_rating < 3 %}-o empty{% endif %}"></i>
+                    <i  class="fa fa-star{% if product.get_avg_rating < 4 %}-o empty{% endif %}"></i>
+                    <i  class="fa fa-star{% if product.get_avg_rating < 5 %}-o empty{% endif %}"></i></span>
+                    </li>
+
+              </ul>
+              
+              <!-- Item Detail -->
+              <p>{{product.description}}</p>
+              
+              <!-- Short By -->
+              <div class="some-info">
+                <ul class="row margin-top-30">
+                  <li class="col-xs-4">
+                    <div class="quinty"> 
+
+                <form id="basket-adder" method="post">
+                  {% csrf_token %}
+                      <!-- QTY -->
+                      <select  name="qty" class="selectpicker">
+                  {% for c in product.count|get_range %}
+                    {%if c%}
+                        <option>{{c}}</option>
+                    {%endif%}
+                   {%endfor%}
+                      </select>
+                    </div>
+                  </li>
+                  
+                  <!-- COLORS -->
+                  <li class="col-xs-8">
+                    <ul class="colors-shop">
+                      <li><span class="margin-right-20">Colors</span></li>
+                      {%for j in product.color.all%}
+                      <input  name="color" type="radio" value="{{j.title}}">
+                      <li><a style="background:{{j.title}};"></a></li>
+                      </input>
+                      {%endfor%}
+                    </ul>
+                  </li>
+             
+
+                  <li class="col-xs-6"><input  class="btn" type="submit"  value="Add To Cart"></li>
+                </form>
+
+
+
+                  <!-- LIKE -->
+                  <li class="col-xs-6"> 
+                  <a id="likeItem{{product.id}}" onclick="LikeItem({{product.id}})"><i class="fas fa-heart"></i></a>
+                   </li>
+                 
+                  
+
+                
+                </ul>
+                
+                <!-- INFOMATION -->
+                <div class="inner-info">
+                  <h6>DELIVERY INFORMATION</h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus ligula a scelerisque gravida. Nullam laoreet tortor ac maximus alique met, consectetur adipiscing elit. </p>
+                  <h6>SHIPPING & RETURNS</h6>
+                  <h6>SHARE THIS PRODUCT</h6>
+                  
+                  <!-- Social Icons -->
+                  <ul class="social_icons">
+                    <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+                    <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+                    <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+                    <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--======= PRODUCT DESCRIPTION =========-->
+        <div class="item-decribe"> 
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs animate fadeInUp" data-wow-delay="0.4s" role="tablist">
+            <li role="presentation" class="active"><a href="#descr" role="tab" data-toggle="tab">DESCRIPTION</a></li>
+            <li role="presentation"><a href="#review" role="tab" data-toggle="tab">REVIEW ({{product.reviews.count}})</a></li>
+            <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">INFORMATION</a></li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content animate fadeInUp" data-wow-delay="0.4s"> 
+            <!-- DESCRIPTION -->
+            <div role="tabpanel" class="tab-pane fade in active" id="descr">
+              <p>{{product.description}}</p>
+            </div>
+            
+            <!-- REVIEW -->
+            <div role="tabpanel" class="tab-pane fade" id="review">
+              <h6> REVIEWS FOR SHIP YOUR IDEA</h6>
+              
+              <!-- REVIEW PEOPLE  -->
+              {%for j in product.reviews.all%}
+              <div class="media">
+                <div class="media-left"> 
+                  <!--  Image -->
+                  <div class="avatar"> <a href="#"> <img class="media-object" src="{% static 'images/avatar-1.jpg' %}" alt=""> </a> </div>
+                </div>
+                <!--  Details -->
+                <div class="media-body">
+                  <h6>{{j.user.username}}
+                    <span class="pull-right">
+                    <i class="fa fa-star{% if j.rate < 1 %}-o empty{% endif %}"></i>
+                    <i class="fa fa-star{% if j.rate < 2 %}-o empty{% endif %}"></i>
+                    <i class="fa fa-star{% if j.rate < 3 %}-o empty{% endif %}"></i>
+                    <i class="fa fa-star{% if j.rate < 4 %}-o empty{% endif %}"></i>
+                    <i class="fa fa-star{% if j.rate < 5 %}-o empty{% endif %}"></i></span> </h6>
+                  <p class="font-playfair">{{j.content|truncatewords:50}}</p>
+                  <div class="review-rating pull-right">
+                    {{j.created_at}}
+                </div>
+                </div>
+              </div>
+                  {%endfor%}
+              
+
+              
+
+              
+              <!-- ADD REVIEW -->
+              <h6 class="margin-t-40">ADD REVIEW</h6>
+              <form action="" method="post" class="review-form">
+              {% csrf_token %}
+                <ul class="row">
+                  <li class="col-sm-12">
+                    {{form.content.label}}
+                    {{form.content}}
+                
+                
+                  </li>
+                  <li class="col-sm-6"> 
+                    <!-- Rating Stars -->
+                    
+                      <div class="form-group">
+                      <div class="input-rating">
+                        <strong class="text-uppercase">YOUR RATING: </strong>
+                        <div class="stars">
+                          <input type="radio" id="star1" name="rate" value="5" /><label for="star1"></label>
+                          <input type="radio" id="star2" name="rate" value="4" /><label for="star2"></label>
+                          <input type="radio" id="star3" name="rate" value="3" /><label for="star3"></label>
+                          <input type="radio" id="star4" name="rate" value="2" /><label for="star4"></label>
+                          <input type="radio" id="star5" name="rate" value="1" /><label for="star5"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="col-sm-6">
+                    <button type="submit" class="btn btn-dark btn-small pull-right no-margin">POST REVIEW</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            
+
+            <!-- TAGS -->
+           
+            <div role="tabpanel" class="tab-pane fade in active" id="tags">
+              <p>{{product.information}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   
+ 
+    <!-- Popular Products -->
+    <section class="light-gray-bg padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>YOU MAY LIKE IT</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+        
+        <!-- Popular Item Slide -->
+        <div class="papular-block block-slide single-img-demos"> 
+          
+          {%for i in product_list%}
+             {%if i.is_published and i != product%}
+           
+          <!-- Item -->
+          <div class="item"> 
+        {%if i.discount%}<div class="on-sale"> {{i.discount}} % <span>OFF</span></div>{%endif%}
+
+            <!-- Item img -->           
+                         
+            <div class="item-img"> <img class="img-1" src='{{i.cover_image.url}}' alt="" > 
+
+              <!-- Overlay -->
+              <div class="overlay">
+                <div class="position-center-center">
+                  <div class="inn"><a href='{{i.cover_image.url}}' data-lighter><i class="icon-magnifier"></i></a> 
+                  <a href="#."><i class="icon-basket"></i></a> 
+                  <a id="likeItem{{i.id}}" onclick="LikeItem({{i.id}})"><i class="fas fa-heart"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Item Name -->
+            <div class="item-name"> <a href="{% url 'product:product_detail' i.id %}">{{i.title}}</a>
+              <p>{{i.information|truncatechars:30}}</p>
+            </div>
+            <!-- Price --> 
+              {%if i.discount%}
+              <span class="price"><small>$</small>{{i.total_price}} <span style="text-decoration:line-through"><small>$</small>{{i.price}}</span></span>
+            
+               {%else%}
+              <span class="price" ><small>$</small>{{i.price}}</span>
+              {%endif%}
+
+             </div>
+            {%endif%}
+          {%endfor%}
+
+
+
+    
+          
+ 
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    
+  </div>
+  <script src="{% static 'js/addtoCart.js' %}"></script>
+  <script src="{% static 'js/likeItem.js' %}"></script>
+   {% endblock %}
+
