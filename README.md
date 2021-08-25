@@ -14,3 +14,4 @@ Built with
 
 
 DataBase model
+<img width="921" alt="Screen Shot 2021-08-25 at 10 51 46" src="https://user-images.githubusercontent.com/57415389/130740772-39094ec7-33bd-48f7-be54-29b668f5f3ab.png">
