@@ -1,0 +1,168 @@
+{% extends 'base.html'  %}
+
+
+{% block content %}
+
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>REGISTER</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Pages</a></li>
+          <li class="active">REGISTER</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!--======= PAGES INNER =========-->
+    <section class="chart-page padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Payments Steps -->
+        <div class="shopping-cart"> 
+          
+          <!-- SHOPPING INFORMATION -->
+          <div class="cart-ship-info register">
+            <div class="row"> 
+              
+              <!-- ESTIMATE SHIPPING & TAX -->
+              <div class="col-sm-12">
+                <h6>REGISTER</h6>
+                <form action="" method="POST">
+                {% csrf_token %}
+                  <ul class="row">
+
+                    <!-- USERNAME -->
+                    <li class="col-md-6">
+                       {{form.username.label}}
+                      {{form.username}}
+                      {%for error in form.username.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+
+                    <!-- Name -->
+                    <li class="col-md-6">
+                       {{form.first_name.label}}
+                      {{form.first_name}}
+                      {%for error in form.first_name.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <!-- LAST NAME -->
+                    <li class="col-md-6">
+                     {{form.last_name.label}}
+                      {{form.last_name}}
+                      {%for error in form.last_name.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- EMAIL ADDRESS -->
+                    <li class="col-md-6">
+                      {{form.email.label}}
+                      {{form.email}}
+                      {%for error in form.email.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+
+                    
+                    <!-- LAST NAME -->
+                    <li class="col-md-6">
+                     {{form.password1.label}}
+                      {{form.password1}}
+                      {%for error in form.password1.errors%}
+                        <li class="text-danger">{{error}}</li>
+                              {%endfor%}
+                    </li>
+                    
+                    <!-- LAST NAME -->
+                    <li class="col-md-6">
+                    {{form.password2.label}}
+                      {{form.password2}}
+                      {%for error in form.password2.errors%}
+                        <li class="text-danger">{{error}}</li>
+                              {%endfor%}
+                    </li>
+                    <li class="col-md-6"> 
+                      <!-- ADDRESS -->
+                     {{form.address.label}}
+                      {{form.address}}
+                      {%for error in form.address.errors%}
+                        <li class="text-danger">{{error}}</li>
+                              {%endfor%}
+                    </li>
+
+                      <!-- PHONE -->
+                    <li class="col-md-6">
+                    {{form.phone.label}}
+                      {{form.phone}}
+                      {%for error in form.phone.errors%}
+                        <li class="text-danger">{{error}}</li>
+                              {%endfor%}
+                    </li>
+                    <!-- COUNTRY -->
+                    <li class="col-md-6">
+                      {{form.country.label}}
+                      {{form.country}}
+                      {%for error in form.country.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- TOWN/CITY -->
+                    <li class="col-md-6">
+                       {{form.city.label}}
+                      {{form.city}}
+                      {%for error in form.city.errors%}
+                        <li class="text-danger">{{error}}</li>
+                        {%endfor%}
+                    </li>
+                    
+                    <!-- SUBMIT -->
+                    <li class="col-md-6">
+                    <br>
+                      <button type="submit" class="btn">REGISTER NOW</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  
+   {% endblock %}

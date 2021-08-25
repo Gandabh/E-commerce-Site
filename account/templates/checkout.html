@@ -1,0 +1,248 @@
+{% extends 'base.html'  %}
+
+
+{% block content %}
+{% load static %}
+
+  
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>CHECKOUT</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li class="active">CHECKOUT</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!--======= PAGES INNER =========-->
+    <section class="chart-page padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Payments Steps -->
+        <div class="shopping-cart"> 
+          
+          <!-- SHOPPING INFORMATION -->
+          <div class="cart-ship-info">
+            <div class="row"> 
+              
+              <!-- ESTIMATE SHIPPING & TAX -->
+              <div class="col-sm-7">
+                <h6>BILLING DETAILS</h6>
+                <form action="" method="post">
+                  {% csrf_token %}
+                  <ul class="row">
+                    <li class="col-md-6"> 
+                      <!-- COMPANY NAME -->
+                      {{form.company.label}}
+                      {{form.company}}
+                      {%for error in form.company.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <li class="col-md-6"> 
+                      <!-- ADDRESS -->
+                      {{form.address.label}}
+                      {{form.address}}
+                      {%for error in form.address.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <!-- TOWN/CITY -->
+                    <li class="col-md-6">
+                      {{form.city.label}}
+                      {{form.city}}
+                      {%for error in form.city.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- COUNTRY -->
+                    <li class="col-md-6">
+                      {{form.country.label}}
+                      {{form.country}}
+                      {%for error in form.country.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- EMAIL ADDRESS -->
+                    <li class="col-md-6">
+                      {{form.email.label}}
+                      {{form.email}}
+                      {%for error in form.email.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <!-- PHONE -->
+                    <li class="col-md-6">
+                      {{form.phone.label}}
+                      {{form.phone}}
+                      {%for error in form.phone.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+
+                  </ul>
+           
+                
+                <!-- SHIPPING info -->
+                <h6 class="margin-top-50">SHIPPING info</h6>
+          
+                  <ul class="row">
+                    <li class="col-md-6"> 
+                      <!-- COMPANY NAME -->
+                      {{form.shipping_company.label}}
+                      {{form.shipping_company}}
+                      {%for error in form.shipping_company.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <li class="col-md-6"> 
+                      <!-- ADDRESS -->
+                      {{form.shipping_address.label}}
+                      {{form.shipping_address}}
+                      {%for error in form.shipping_address.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <!-- TOWN/CITY -->
+                    <li class="col-md-6">
+                      {{form.shipping_city.label}}
+                      {{form.shipping_city}}
+                      {%for error in form.shipping_city.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- COUNTRY -->
+                    <li class="col-md-6">
+                      {{form.shipping_country.label}}
+                      {{form.shipping_country}}
+                      {%for error in form.shipping_country.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    <!-- EMAIL ADDRESS -->
+                    <li class="col-md-6">
+                      {{form.shipping_email.label}}
+                      {{form.shipping_email}}
+                      {%for error in form.shipping_email.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    <!-- PHONE -->
+                    <li class="col-md-6">
+                      {{form.shipping_phone.label}}
+                      {{form.shipping_phone}}
+                      {%for error in form.shipping_phone.errors%}
+                        <li class="text-danger">{{error}}</li>
+                      {%endfor%}
+                    </li>
+                    
+                    
+                    <!-- SUBMIT -->
+                    <li class="col-md-6">
+                      <br>
+                      <button type="submit" class="btn">SUBMIT</button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+              
+              <!-- SUB TOTAL -->
+              <div class="col-sm-5">
+                <h6>YOUR ORDER</h6>
+                <div class="order-place">
+
+                  
+                  <div class="order-detail">
+
+
+                    <div  id="orderdetail_checkout">
+                  
+                    </div>
+                    <div id="totalcost_checkout">
+                    
+                  </div>
+                  </div>
+
+
+                  <div class="pay-meth">
+                    <ul>
+                      <li>
+                        <div class="radio">
+                          <input type="radio" name="radio1" id="radio1" value="option1" checked>
+                          <label for="radio1"> DIRECT BANK TRANSFER </label>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat turpis, pellentesque non leo eget, pulvinar pretium arcu. Mauris porta elit non.</p>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input type="radio" name="radio1" id="radio2" value="option2">
+                          <label for="radio2"> CASH ON DELIVERY</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input type="radio" name="radio1" id="radio3" value="option3">
+                          <label for="radio3"> CHEQUE PAYMENT </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input type="radio" name="radio1" id="radio4" value="option4">
+                          <label for="radio4"> PAYPAL </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="checkbox3-4" class="styled" type="checkbox">
+                          <label for="checkbox3-4"> I’VE READ AND ACCEPT THE <span class="color"> TERMS & CONDITIONS </span> </label>
+                        </div>
+                      </li>
+                    </ul>
+                    <a href="#." class="btn  btn-dark pull-right margin-top-30">PLACE ORDER</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  
+  <script src="{% static 'js/Checkout.js' %}"></script>
+  {% endblock %}
