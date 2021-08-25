@@ -1,0 +1,317 @@
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 5525
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 10843
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+[36mGET /en/product/shopping-cart/[0m
+[36mGET /en/product/shopping-cart/ - 200[0m
+"GET /en/product/shopping-cart/ HTTP/1.1" 200 19250
+"GET /static/js/deleteCartItem.js HTTP/1.1" 304 0
+"GET /static/js/shoppingcart.js HTTP/1.1" 404 1813
+"GET /static/js/shoppingcart.js HTTP/1.1" 404 1813
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 5525
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 10843
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 5600
+/Users/gandabhasanova/E-commerce-Pavshop-Ilkin-Qendab/PAVSHOP/settings.py changed, reloading.
+Watching for file changes with StatReloader
+[36mGET /[0m
+[35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Sec-Ch-Ua-Mobile': '?0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Purpose': 'prefetch', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en'}[0m
+[35mb''[0m
+[35mGET / - 404[0m
+"GET / HTTP/1.1" 302 0
+[36mGET /en/[0m
+[36mGET /en/ - 200[0m
+"GET /en/ HTTP/1.1" 200 44011
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 304 0
+[36mGET /media/product_images/product10.jpeg[0m
+[36mGET /media/product_images/product7_eWLotOU.webp[0m
+[36mGET /media/product_images/product10.jpeg - 304[0m
+[36mGET /media/product_images/product7_eWLotOU.webp - 304[0m
+[36mGET /media/static/media/product_images/productitem5_aREnE3j.jpeg[0m
+[36mGET /media/static/media/product_images/chair.jpeg[0m
+[36mGET /media/static/media/product_images/productitem3.jpeg[0m
+[36mGET /media/static/media/product_images/productitem1.jpeg[0m
+"GET /media/product_images/product10.jpeg HTTP/1.1" 304 0
+"GET /media/product_images/product7_eWLotOU.webp HTTP/1.1" 304 0
+[36mGET /media/static/media/product_images/productitem5_aREnE3j.jpeg - 304[0m
+[36mGET /media/static/media/product_images/chair.jpeg - 304[0m
+[36mGET /media/static/media/product_images/productitem3.jpeg - 304[0m
+[36mGET /media/static/media/product_images/productitem1.jpeg - 304[0m
+"GET /media/static/media/product_images/productitem5_aREnE3j.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem3.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/chair.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem1.jpeg HTTP/1.1" 304 0
+[36mGET /media/static/media/product_images/item-img-1-8_.jpeg[0m
+[36mGET /media/static/media/product_images/productitem6.jpeg[0m
+[36mGET /media/static/media/product_images/item-img-1-8_.jpeg - 304[0m
+[36mGET /media/static/media/product_images/productitem6.jpeg - 304[0m
+"GET /media/static/media/product_images/item-img-1-8_.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem6.jpeg HTTP/1.1" 304 0
+"GET /static/js/likeItem.js HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/js/scripts.js HTTP/1.1" 304 0
+"GET /static/js/fetch.js HTTP/1.1" 304 0
+[36mGET /media/static/media/product_images/productitem7_wNkIEpE.jpeg[0m
+[36mGET /media/static/media/product_images/productitem7_wNkIEpE.jpeg - 304[0m
+[36mGET /media/product_images/product8.jpeg[0m
+[36mGET /media/product_images/product8.jpeg - 304[0m
+"GET /media/product_images/product8.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem7_wNkIEpE.jpeg HTTP/1.1" 304 0
+[36mGET /media/product_images/product11.jpeg[0m
+[36mGET /media/static/media/product_images/productitem2.jpeg[0m
+"GET /static/images/pavshop6.jpeg HTTP/1.1" 304 0
+[36mGET /media/product_images/product11.jpeg - 304[0m
+[36mGET /media/static/media/product_images/productitem2.jpeg - 304[0m
+"GET /media/product_images/product11.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem2.jpeg HTTP/1.1" 304 0
+[36mGET /favicon.ico[0m
+[35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://localhost:8000/en/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en'}[0m
+[35mb''[0m
+[35mGET /favicon.ico - 404[0m
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3872
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /media/static/media/product_images/productitem5_aREnE3j.jpeg[0m
+[36mGET /media/static/media/product_images/productitem5_aREnE3j.jpeg - 304[0m
+[36mGET /media/product_images/product11.jpeg[0m
+[36mGET /media/product_images/product11.jpeg - 304[0m
+"GET /media/static/media/product_images/productitem5_aREnE3j.jpeg HTTP/1.1" 304 0
+"GET /media/product_images/product11.jpeg HTTP/1.1" 304 0
+[36mGET /media/static/media/product_images/productitem3.jpeg[0m
+[36mGET /media/static/media/product_images/productitem3.jpeg - 304[0m
+"GET /media/static/media/product_images/productitem3.jpeg HTTP/1.1" 304 0
+[36mGET /media/static/media/product_images/item-img-1-8_.jpeg[0m
+[36mGET /media/static/media/product_images/productitem1.jpeg[0m
+[36mGET /media/static/media/product_images/item-img-1-8_.jpeg - 304[0m
+[36mGET /api/cartitems/[0m
+[36mGET /media/static/media/product_images/productitem1.jpeg - 304[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /media/static/media/product_images/item-img-1-8_.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/product_images/productitem1.jpeg HTTP/1.1" 304 0
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/[0m
+[36mGET /en/ - 200[0m
+"GET /en/ HTTP/1.1" 200 44011
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/product/product-list/[0m
+[36mGET /en/product/product-list/ - 200[0m
+"GET /en/product/product-list/ HTTP/1.1" 200 30146
+"GET /static/images/clothes1.jpeg HTTP/1.1" 304 0
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /blog/blog-list[0m
+[36mGET /blog/blog-list - 200[0m
+"GET /blog/blog-list HTTP/1.1" 200 25598
+[36mGET /media/static/media/blog_images/item-img-1-8_.jpeg[0m
+[36mGET /media/static/media/blog_images/item-img-1-8_.jpeg - 304[0m
+"GET /media/static/media/blog_images/item-img-1-8_.jpeg HTTP/1.1" 304 0
+[36mGET /media/static/media/blog_images/about2.jpeg[0m
+[36mGET /media/static/media/blog_images/nav-img_UndUi5b.png[0m
+[36mGET /media/static/media/blog_images/about3_rx3DSam.jpeg[0m
+[36mGET /media/static/media/blog_images/about2.jpeg - 304[0m
+[36mGET /media/static/media/blog_images/pavshop3.jpeg[0m
+[36mGET /media/static/media/blog_images/nav-img_UndUi5b.png - 304[0m
+"GET /static/images/clothes2.png HTTP/1.1" 304 0
+[36mGET /media/static/media/blog_images/about3_rx3DSam.jpeg - 304[0m
+[36mGET /media/static/media/blog_images/pavshop3.jpeg - 200[0m
+"GET /media/static/media/blog_images/about2.jpeg HTTP/1.1" 304 0
+"GET /media/static/media/blog_images/nav-img_UndUi5b.png HTTP/1.1" 304 0
+"GET /media/static/media/blog_images/about3_rx3DSam.jpeg HTTP/1.1" 304 0
+"GET /static/images/pavshop2.jpeg HTTP/1.1" 200 1655805
+"GET /media/static/media/blog_images/pavshop3.jpeg HTTP/1.1" 200 1657380
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/[0m
+[36mGET /en/ - 200[0m
+"GET /en/ HTTP/1.1" 200 44011
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/product/shopping-cart/[0m
+[36mGET /en/product/shopping-cart/ - 200[0m
+"GET /en/product/shopping-cart/ HTTP/1.1" 200 17532
+"GET /static/js/addtoCart.js HTTP/1.1" 304 0
+"GET /static/js/shoppingcart.js HTTP/1.1" 404 1813
+"GET /static/js/deleteCartItem.js HTTP/1.1" 304 0
+"GET /static/js/shoppingcart.js HTTP/1.1" 404 1813
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/contact/[0m
+[36mGET /en/contact/ - 200[0m
+"GET /en/contact/ HTTP/1.1" 200 18745
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/cartitems/[0m
+[36mGET /api/products/ - 200[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/contact/images/map-locator.png[0m
+[35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://localhost:8000/en/contact/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en'}[0m
+[35mb''[0m
+[35mGET /en/contact/images/map-locator.png - 404[0m
+Not Found: /en/contact/images/map-locator.png
+"GET /en/contact/images/map-locator.png HTTP/1.1" 404 5548
+[36mGET /en/contact/images/map-locator.png[0m
+[35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://localhost:8000/en/contact/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en'}[0m
+[35mb''[0m
+[35mGET /en/contact/images/map-locator.png - 404[0m
+Not Found: /en/contact/images/map-locator.png
+"GET /en/contact/images/map-locator.png HTTP/1.1" 404 5548
+[36mPOST /en/contact/php/submit.php[0m
+[35m{'Content-Length': '0', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Accept': '*/*', 'X-Requested-With': 'XMLHttpRequest', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Origin': 'http://localhost:8000', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8000/en/contact/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en'}[0m
+[35mb''[0m
+[35mPOST /en/contact/php/submit.php - 404[0m
+Not Found: /en/contact/php/submit.php
+"POST /en/contact/php/submit.php HTTP/1.1" 404 5525
+[36mPOST /en/contact/[0m
+[36mPOST /en/contact/ - 302[0m
+"POST /en/contact/ HTTP/1.1" 302 0
+[36mGET /[0m
+[35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': 'localhost:8000', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Sec-Ch-Ua': '"Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"', 'Sec-Ch-Ua-Mobile': '?0', 'Referer': 'http://localhost:8000/en/contact/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en,ru;q=0.9,ru-RU;q=0.8,en-US;q=0.7,az;q=0.6', 'Cookie': 'adminer_key=6a25a0f02e209aca83031db7963d1d67; java-tutorial=javatpoint.com; j=javatpoint.com; JET_THEME=green; tabstyle=html-tab; sidebar_pinned=true; adminer_permanent=; adminer_sid=3d2f26a235b186e32336fbed50d65766; csrftoken=MdDY7k8h4hrGUN04AJBdOqU8s2pvi4pzGwQZsZoSiqma4IeWlhmP8ul8W8kD9wMD; sessionid=k7fhb0dhrlcqqsmxjcdkw8v0dgl91jbx; django_language=en; messages=W1siX19qc29uX21lc3NhZ2UiLDAsMjUsIllvdXIgbWVzc2FnZSBzZW50IHN1Y2Nlc3NmdWxseSEiXV0:1mDKt7:rxqm6872FLLUns0BT0gAjXv7VMgtiFGJ0-XA5tXziQE'}[0m
+[35mb''[0m
+[35mGET / - 404[0m
+"GET / HTTP/1.1" 302 0
+[36mGET /en/[0m
+[36mGET /en/ - 200[0m
+"GET /en/ HTTP/1.1" 200 44141
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+[36mGET /api/products/[0m
+[36mGET /api/products/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+"GET /api/products/ HTTP/1.1" 200 11898
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /en/[0m
+[36mGET /en/ - 200[0m
+"GET /en/ HTTP/1.1" 200 44011
+[36mGET /api/likeditems/[0m
+[36mGET /api/likeditems/ - 200[0m
+"GET /api/likeditems/ HTTP/1.1" 200 2
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/products/[0m
+[36mGET /api/cartitems/[0m
+[36mGET /api/products/ - 200[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/products/ HTTP/1.1" 200 11898
+"GET /api/cartitems/ HTTP/1.1" 200 2296
+[36mGET /api/cartitems/[0m
+[36mGET /api/cartitems/ - 200[0m
+"GET /api/cartitems/ HTTP/1.1" 200 2296
